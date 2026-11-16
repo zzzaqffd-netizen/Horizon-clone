@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizon Frontier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">H</span>
+          <span>Horizon Frontier</span>
+        </div>
+        <nav>
+          <a href="#world">World</a>
+          <a href="#machines">Machines</a>
+          <a href="#story">Story</a>
+          <a href="#missions">Missions</a>
+        </nav>
+        <button class="cta">Join the expedition</button>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">A new frontier awakens</p>
+            <h1>Survive the wilds.<br />Outsmart the giants.</h1>
+            <p class="lede">
+              Explore a ruined world where ancient mysteries, hostile machines, and
+              a living ecosystem collide.
+            </p>
+            <div class="hero-actions">
+              <button class="primary">Start mission</button>
+              <button class="ghost">Watch trailer</button>
+            </div>
+            <ul class="stats">
+              <li><strong>4</strong><span>Regions</span></li>
+              <li><strong>12</strong><span>Boss machines</span></li>
+              <li><strong>∞</strong><span>Secrets</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Horizon-inspired scene">
+            <div class="sun-glow"></div>
+            <div class="landscape">
+              <div class="ridge ridge-one"></div>
+              <div class="ridge ridge-two"></div>
+              <div class="ridge ridge-three"></div>
+              <div class="machine silhouette">
+                <div class="eye"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-grid" id="world">
+          <article class="info-card accent">
+            <p class="label">World</p>
+            <h2>Open-world discovery</h2>
+            <p>
+              Traverse majestic valleys, frozen peaks, and crimson ruins while tracking
+              dynamic weather and hidden danger across every horizon.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <p class="label">Combat</p>
+            <h2>Adaptive survival</h2>
+            <p>
+              Craft gear, exploit elemental weaknesses, and learn the rhythm of each
+              machine before it closes in.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <p class="label">Story</p>
+            <h2>Ancient truths</h2>
+            <p>
+              Uncover the origins of the machine era and the strange force that still
+              shapes the fate of the wilderness.
+            </p>
+          </article>
+        </section>
+
+        <section class="machines-section" id="machines">
+          <div class="section-heading">
+            <p class="eyebrow">Threats</p>
+            <h2>Legendary machines</h2>
+          </div>
+          <div class="machine-grid" id="machine-grid"></div>
+        </section>
+
+        <section class="story-panel" id="story">
+          <div class="story-copy">
+            <p class="eyebrow">The call of the wild</p>
+            <h2>Every landmark hides a memory.</h2>
+            <p>
+              The frontier is not empty. It is alive with mechanical creatures, forgotten
+              civilizations, and a future still waiting to be understood.
+            </p>
+          </div>
+          <div class="story-points">
+            <div>
+              <span>01</span>
+              <p>Track the movement of colossal predators.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <p>Rescue outposts and secure supply chains.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <p>Decide who deserves a future in the wild.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="missions" id="missions">
+          <div class="section-heading">
+            <p class="eyebrow">Objectives</p>
+            <h2>Current expedition</h2>
+          </div>
+          <div class="mission-list" id="mission-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
