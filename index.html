@@ -1,107 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#07130d" />
-    <meta name="description" content="Explore the frontier, study machine threats, and take on a playable survival mission." />
-    <title>Horizon Frontier — Machine Survival</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="topbar">
-        <a class="brand" href="#top" aria-label="Horizon Frontier home">
-          <span class="brand-mark">H</span>
-          <span>Horizon Frontier</span>
-        </a>
-        <nav aria-label="Main navigation">
-          <a href="#world">World</a>
-          <a href="#machines">Machines</a>
-          <a href="#story">Story</a>
-          <a href="#missions">Missions</a>
-        </nav>
-        <a class="cta" href="#play">Join the expedition</a>
-      </header>
-
-      <main id="top">
-        <section class="hero">
-          <div class="hero-copy">
-            <p class="eyebrow">A new frontier awakens</p>
-            <h1>Survive the wilds.<br />Outsmart the giants.</h1>
-            <p class="lede">Explore a ruined world where ancient mysteries, hostile machines, and a living ecosystem collide.</p>
-            <div class="hero-actions">
-              <a class="primary" href="#play">Start mission</a>
-              <button class="ghost" id="trailer-button" type="button">Explore the frontier</button>
-            </div>
-            <ul class="stats" aria-label="Expedition statistics">
-              <li><strong>4</strong><span>Regions</span></li>
-              <li><strong>12</strong><span>Machine files</span></li>
-              <li><strong>∞</strong><span>Secrets</span></li>
-            </ul>
-          </div>
-          <div class="hero-visual" role="img" aria-label="A machine silhouette against a sunset over a wild valley">
-            <div class="sun-glow"></div>
-            <div class="landscape">
-              <div class="ridge ridge-one"></div><div class="ridge ridge-two"></div><div class="ridge ridge-three"></div>
-              <div class="machine silhouette"><div class="eye"></div></div>
-            </div>
-            <span class="visual-caption">THE FORBIDDEN WEST · 04:32 AM</span>
-          </div>
-        </section>
-
-        <section class="section-grid" id="world" aria-label="Explore the frontier">
-          <article class="info-card accent"><p class="label">World</p><h2>Open-world discovery</h2><p>Traverse majestic valleys, frozen peaks, and crimson ruins while tracking dynamic weather and hidden danger across every horizon.</p></article>
-          <article class="info-card"><p class="label">Combat</p><h2>Adaptive survival</h2><p>Craft gear, exploit elemental weaknesses, and learn the rhythm of each machine before it closes in.</p></article>
-          <article class="info-card"><p class="label">Story</p><h2>Ancient truths</h2><p>Uncover the origins of the machine era and the strange force that still shapes the fate of the wilderness.</p></article>
-        </section>
-
-        <section class="machines-section" id="machines">
-          <div class="section-heading"><div><p class="eyebrow">Threat database</p><h2>Machine field guide</h2></div><p class="section-note">Study your target before the hunt begins.</p></div>
-          <div class="machine-grid" id="machine-grid" aria-live="polite"></div>
-        </section>
-
-        <section class="story-panel" id="story">
-          <div class="story-copy"><p class="eyebrow">The call of the wild</p><h2>Every landmark hides a memory.</h2><p>The frontier is not empty. It is alive with mechanical creatures, forgotten civilizations, and a future still waiting to be understood.</p></div>
-          <div class="story-points">
-            <div><span>01</span><p>Track the movement of colossal predators.</p></div>
-            <div><span>02</span><p>Rescue outposts and secure supply chains.</p></div>
-            <div><span>03</span><p>Decide who deserves a future in the wild.</p></div>
-          </div>
-        </section>
-
-        <section class="play-section" id="play">
-          <div class="section-heading"><div><p class="eyebrow">Playable prototype</p><h2>Machine survival</h2></div><p class="section-note">A quick expedition into hostile territory.</p></div>
-          <div class="game-shell">
-            <div class="game-toolbar" aria-label="Mission status">
-              <div><span class="hud-label">Integrity</span><div class="health-track" role="progressbar" aria-label="Player integrity" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><span id="health-fill"></span></div></div>
-              <div><span class="hud-label">Salvage</span><strong id="score-value">0000</strong></div>
-              <div><span class="hud-label">Wave</span><strong id="wave-value">01</strong></div>
-              <button class="pause-button" id="pause-button" type="button" aria-pressed="false">Pause</button>
-            </div>
-            <div class="arena-wrap">
-              <canvas id="game-canvas" width="900" height="500" aria-label="Machine survival game arena. Use WASD or arrow keys to move, aim with the pointer, and click or press Space to fire."></canvas>
-              <div class="game-overlay" id="game-overlay">
-                <p class="eyebrow" id="overlay-eyebrow">Frontier mission</p>
-                <h3 id="overlay-title">Enter the wilds</h3>
-                <p id="overlay-copy">Collect salvage and survive the machine patrols. Move with WASD or arrows, aim with your pointer, and fire with click or Space.</p>
-                <button class="primary" id="game-start" type="button">Start mission</button>
-              </div>
-            </div>
-            <div class="game-footer"><span><kbd>WASD</kbd> / <kbd>↑↓←→</kbd> move</span><span><kbd>Mouse</kbd> aim</span><span><kbd>Click</kbd> / <kbd>Space</kbd> fire</span><span><kbd>P</kbd> pause</span></div>
-          </div>
-        </section>
-
-        <section class="missions" id="missions">
-          <div class="section-heading"><div><p class="eyebrow">Objectives</p><h2>Current expedition</h2></div><p class="section-note">Four steps stand between you and the signal.</p></div>
-          <div class="mission-list" id="mission-list"></div>
-        </section>
-      </main>
-      <footer class="site-footer"><span>Horizon Frontier · Fan-made browser prototype</span><a href="#top">Back to top ↑</a></footer>
-    </div>
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07130d" />
+  <title>Horizon Frontier</title>
+  <link rel="stylesheet" href="portal.css" />
+</head>
+<body>
+  <main class="portal">
+    <header><a class="brand" href="index.html"><span>H</span> HORIZON FRONTIER</a><nav><a href="game.html">Play</a><a href="atlas.html">Expedition atlas</a></nav></header>
+    <section class="hero"><p class="eyebrow">A new frontier awaits</p><h1>Into the wilds.</h1><p>Explore a larger wilderness, survive machine patrols, collect salvage, and discover the frontier field archive.</p><div class="actions"><a class="button primary" href="game.html">Enter the frontier</a><a class="button secondary" href="atlas.html">Open the atlas</a></div><div class="features"><article><span>01 / EXPLORE</span><h2>A wide, scrolling wilderness</h2><p>Travel across a large world with forests, ruins, camps, and distinct regions.</p></article><article><span>02 / SURVIVE</span><h2>Machines on the hunt</h2><p>Fight scouts, chargers, heavy units, and powerful apex encounters.</p></article><article><span>03 / PREPARE</span><h2>Field archive</h2><p>Browse supplies, gear, and mapped locations in the expedition atlas.</p></article></div></section>
+    <footer>Fan-made browser prototype · Built with HTML Canvas, CSS, and JavaScript</footer>
+  </main>
+</body>
 </html>
