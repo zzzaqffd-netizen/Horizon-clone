@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07130d" />
+  <meta name="description" content="Browse 40 frontier supplies and 60 locations across the Horizon Frontier atlas." />
+  <title>Expedition Atlas — Horizon Frontier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="atlas.css" />
+  <script src="atlas.js" defer></script>
+</head>
+<body>
+  <header class="topbar wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">H</span><span>Horizon Frontier</span></a>
+    <nav aria-label="Atlas navigation"><a href="index.html">Home</a><a href="#gear">Gear & supplies</a><a href="#locations">Locations</a></nav>
+    <span class="edition">EXPEDITION ATLAS · FIELD EDITION</span>
+  </header>
+  <main class="wrap">
+    <section class="intro">
+      <p class="eyebrow">Field archive · 05 regions</p>
+      <h1>Chart the unknown.</h1>
+      <p class="lead">Pack for the trail, mark your route, and explore sixty original frontier stops. Search the archive or filter by region and category.</p>
+      <div class="totals"><div><strong id="gear-count">40</strong><span>Gear & supplies</span></div><div><strong id="location-count">60</strong><span>Mapped locations</span></div><div><strong>05</strong><span>Regions</span></div></div>
+    </section>
+
+    <section class="catalog-section" id="gear">
+      <div class="section-heading"><div><p class="eyebrow">Pack inventory</p><h2>Gear & supplies</h2></div><p class="section-note">Forty tools, materials, and field provisions for the road.</p></div>
+      <div class="filters">
+        <label class="search"><span>Search gear</span><input id="gear-search" type="search" placeholder="Try: medicine, rope, fire…" autocomplete="off" /></label>
+        <label class="select-label">Category<select id="gear-category"><option value="all">All categories</option></select></label>
+      </div>
+      <p class="result-line" id="gear-results" aria-live="polite"></p>
+      <div class="card-grid gear-grid" id="gear-grid"></div>
+    </section>
+
+    <section class="catalog-section" id="locations">
+      <div class="section-heading"><div><p class="eyebrow">World map</p><h2>Sixty places to discover</h2></div><p class="section-note">Six landmarks in each of five distinct regions.</p></div>
+      <div class="filters">
+        <label class="search"><span>Search locations</span><input id="location-search" type="search" placeholder="Try: coast, ruins, camp…" autocomplete="off" /></label>
+        <label class="select-label">Region<select id="location-region"><option value="all">All regions</option></select></label>
+      </div>
+      <p class="result-line" id="location-results" aria-live="polite"></p>
+      <div class="card-grid location-grid" id="location-grid"></div>
+    </section>
+    <footer><span>Horizon Frontier · Fan-made expedition atlas</span><a href="#top">Back to top ↑</a></footer>
+  </main>
+</body>
+</html>
